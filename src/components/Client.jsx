@@ -26,7 +26,8 @@ const Client = ({client}) => {
                 onClick={() => navigate(`/clientes/${id}/editar`)}>
                     Editar
                 </button>
-                <Form method='POST' action={`/clientes/${id}/eliminar`} onSubmit={ e => {
+                <Form method='POST' action={`/clientes/${id}/eliminar`} 
+                onSubmit={ e => {
                     if(!confirm('¿Desea eliminar al usuario?')) e.preventDefault(); 
                 }}>
                     <button type="submit" className="text-red-600 hover:text-red-700 uppercase font-bold text-xs">
